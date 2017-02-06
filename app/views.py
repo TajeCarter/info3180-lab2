@@ -4,7 +4,7 @@ Jinja2 Documentation:    http://jinja.pocoo.org/2/documentation/
 Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
 This file creates your application.
 """
-
+import time
 from app import app
 from flask import render_template, request, redirect, url_for
 
@@ -23,6 +23,13 @@ def home():
 def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
+
+def timeinfo():
+    return time.strftime("%a, %d %b %Y")
+
+@app.route('/profile/')
+def profile():
+    return render_template('profile.html', currenttime=(timeinfo()))
 
 
 ###

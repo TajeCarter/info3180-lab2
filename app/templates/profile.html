@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <head>
+     <link href="/static/css/profile.css" rel="stylesheet" >
+  </head>
+  <body>
+    <img src="app/static/Avatar_girl_face.png">
+    <div class="profile">
+      <div class="box"><h1> Taje Carter </h1></div>
+      <br>
+      <div class="box"><p> Today is: {{ currenttime }}</p></div>
+      
+      <div class="box">
+        <p> Username: Taj-C </p>
+        <p> ID: 62009694 </p>
+        <p> Age: 21 </p>
+        <p> Gender: Female </p>
+        <br>
+        <p>I am a legendary Jedi Master</p>
+      </div>
+    </div>
+  </body>
+{% endblock %}
